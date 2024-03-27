@@ -23,12 +23,12 @@ public class HovedsidePage {
     public WebElement bekreftKode;
     @FindBy(xpath = "//div[text()='sign in verification failed']")
     public WebElement obs;
-
-
     @FindBy(xpath = "//p[text()='Logg inn']")
     public WebElement loggInnNede;
     @FindBy(xpath = "//div[@class='column right']//button[text()='Fortsett levering']")
     public WebElement fortsettLevering;
+     @FindBy(xpath = "//div[starts-with(@class,'_cardContainer')]//child::button[text()='Lever sekk']")
+    public WebElement leverSekk;
     @FindBy(xpath = "//span[text()='ofte stilte spørsmål']")
     public WebElement ofteStilte;
     @FindBy(xpath = "//a[text()='post@stikkut.no']")

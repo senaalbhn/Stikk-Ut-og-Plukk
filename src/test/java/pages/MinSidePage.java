@@ -26,8 +26,10 @@ public class MinSidePage {
     public WebElement kontoNavn;
     @FindBy(xpath = "//label[text()='Bankkonto']//parent::div[@class='_inputgroup_125ea_1']//child::input[@class='_input_125ea_1']")
     public WebElement kontonummer;
-    @FindBy(css = "label[class*='switch'] input")
+    @FindBy(css = "span[class*='slider']")
     public WebElement defaultButton;
+    @FindBy(xpath = "//button[text()='Slett konto']")
+    public WebElement slettButton;
     @FindBy(xpath = "//button[text()='Logg ut']")
     public WebElement loggUt;
     @FindBy(xpath = "//a[text()='Vilkår']")
