@@ -87,11 +87,15 @@ public class LeverSekkStepDef {
 
     @Given("Klikk Stikk ut og plukk")
     public void klikkStikkUtOgPlukk() {
+        ReusableMethods.wait(1);
         leverSekkPage.stikkUtPlukk.click();
+        ReusableMethods.wait(1);
     }
 
     @And("Bekreft sekker ble ikke levert")
     public void bekreftSekkerBleIkkeLevert() {
+        String allert= Driver.getDriver().switchTo().alert().getText();
+        Assert.assertTrue(allert.contains("Du har ikke fylt inn all nødvendig informasjon"));
     }
 
     @And("Klikk Tilbake")
@@ -103,6 +107,7 @@ public class LeverSekkStepDef {
     public void klikkSletteBilde() {
         leverSekkPage.sletteBilde.click();
         leverSekkPage.buttonJa.click();
+        Driver.getDriver().switchTo().alert().accept();
     }
 
     @And("Bekreft bilde slettet")
@@ -125,5 +130,8 @@ public class LeverSekkStepDef {
     }
 
 
-
+    @Given("Klikk Fortsat Levering")
+    public void klikkFortsatLevering() {
+        hovedsidePage.fortsettLevering.click();
+    }
 }

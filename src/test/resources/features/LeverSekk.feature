@@ -9,13 +9,14 @@ Feature: Lever Sekk Test
     And     Klikk Bekreft kode
 
   Scenario: Brukeren skal kunne levere sekk
+    Given   Klikk Stikk ut og plukk
     Given   Klikk Lever sekk
-    Then    Velg "" konto
+    Then    Velg "Konto1" konto
     And     Velg 2 sekker
     And     Klikk Hent sekkekoder
     And     Bekreft er 2 hente koder
     And     Klikk Neste
-    Then    Last opp "" bilde
+    Then    Last opp "soppel1" bilde
     And     Klikk Neste
     Then    Velg "Molde" lokasjon
     And     Klikk Neste
@@ -25,10 +26,10 @@ Feature: Lever Sekk Test
 
   Scenario: Brukeren skal kunne ikke levere sekk uten velge bankkonto
     Given    Klikk Stikk ut og plukk
-    Given   Klikk Lever sekk
+    Given   Klikk Fortsat Levering
     And     Velg 2 sekker
     And     Klikk Neste
-    Then    Last opp "" bilde
+    Then    Last opp "soppel2" bilde
     And     Klikk Neste
     Then    Velg "Molde" lokasjon
     And     Klikk Neste
@@ -39,7 +40,7 @@ Feature: Lever Sekk Test
   Scenario: Brukeren skal kunne ikke levere sekk uten laste opp bilder
     Given    Klikk Stikk ut og plukk
     Given   Klikk Lever sekk
-    Then    Velg "" konto
+    Then    Velg "Konto1" konto
     And     Velg 2 sekker
     And     Klikk Hent sekkekoder
     And     Bekreft er 2 hente koder
@@ -54,12 +55,12 @@ Feature: Lever Sekk Test
   Scenario: Brukeren skal kunne ikke levere sekk uten velg lokasjon
     Given    Klikk Stikk ut og plukk
     Given   Klikk Lever sekk
-    Then    Velg "" konto
+    Then    Velg "Konto1" konto
     And     Velg 2 sekker
     And     Klikk Hent sekkekoder
     And     Bekreft er 2 hente koder
     And     Klikk Neste
-    Then    Last opp "" bilde
+    Then    Last opp "soppel2" bilde
     And     Klikk Neste
     And     Klikk Neste
     Then    Velg miljostasjon
@@ -69,12 +70,12 @@ Feature: Lever Sekk Test
   Scenario: Brukeren skal kunne ikke levere sekk uten velge miljøstasjon
     Given   Klikk Stikk ut og plukk
     Given   Klikk Lever sekk
-    Then    Velg "" konto
+    Then    Velg "Konto1" konto
     And     Velg 2 sekker
     And     Klikk Hent sekkekoder
     And     Bekreft er 2 hente koder
     And     Klikk Neste
-    Then    Last opp "" bilde
+    Then    Last opp "soppel2" bilde
     And     Klikk Neste
     Then    Velg "Molde" lokasjon
     And     Klikk Neste
@@ -84,12 +85,12 @@ Feature: Lever Sekk Test
   Scenario: Brukeren skal kunne slette bilder gjennom levering sekk
     Given   Klikk Stikk ut og plukk
     Given   Klikk Lever sekk
-    Then    Velg "" konto
+    Then    Velg "Konto1" konto
     And     Velg 2 sekker
     And     Klikk Hent sekkekoder
     And     Bekreft er 2 hente koder
     And     Klikk Neste
-    Then    Last opp "" bilde
+    Then    Last opp "soppel2" bilde
     And     Klikk Neste
     Then    Velg "Molde" lokasjon
     And     Klikk Neste
@@ -107,12 +108,12 @@ Feature: Lever Sekk Test
   Scenario: Brukeren skal kunne slette lokasjon gjennom levering sekk
     Given   Klikk Stikk ut og plukk
     Given   Klikk Lever sekk
-    Then    Velg "" konto
+    Then    Velg "Konto1" konto
     And     Velg 2 sekker
     And     Klikk Hent sekkekoder
     And     Bekreft er 2 hente koder
     And     Klikk Neste
-    Then    Last opp "" bilde
+    Then    Last opp "soppel2" bilde
     And     Klikk Neste
     Then    Velg "Molde" lokasjon
     And     Klikk Neste
@@ -128,12 +129,12 @@ Feature: Lever Sekk Test
  Scenario: Brukeren skal kunne bytte miljøstasjon gjennom levering sekk
     Given   Klikk Stikk ut og plukk
     Given   Klikk Lever sekk
-    Then    Velg "" konto
+    Then    Velg "Konto1" konto
     And     Velg 2 sekker
     And     Klikk Hent sekkekoder
     And     Bekreft er 2 hente koder
     And     Klikk Neste
-    Then    Last opp "" bilde
+    Then    Last opp "soppel2" bilde
     And     Klikk Neste
     Then    Velg "Molde" lokasjon
     And     Klikk Neste
@@ -146,12 +147,12 @@ Feature: Lever Sekk Test
   Scenario: Brukeren skal kunne ombestemme levere sekk
     Given   Klikk Stikk ut og plukk
     Given   Klikk Lever sekk
-    Then    Velg "" konto
+    Then    Velg "Konto1" konto
     And     Velg 2 sekker
     And     Klikk Hent sekkekoder
     And     Bekreft er 2 hente koder
     And     Klikk Neste
-    Then    Last opp "" bilde
+    Then    Last opp "soppel2" bilde
     And     Klikk Neste
     Then    Velg "Molde" lokasjon
     And     Klikk Neste
